@@ -8,3 +8,20 @@ body{
   font-family: 'Poppins', sans-serif;
   font-size: 18px;
 }
+
+.hamburger-button span{
+  width: 1.5rem;
+  height: 0.19rem;
+  background: hsl(0, 0%, 62%);
+  display: block;
+}
+
+nav > .menu-container {
+  animation-name: mobile-menu;
+  animation-duration: 0.2s;
+}
+
+@keyframes mobile-menu {
+  0%{top: 0; opacity: 0;}
+  100% {top: 3rem; opacity: 100%;}
+}
