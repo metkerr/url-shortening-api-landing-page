@@ -1,9 +1,13 @@
+import Footer from "./Components/Footer";
 import Header from "./Components/Header";
+import Main from "./Components/Main";
 
 function App() {
   return (
-    <div className="App my-10">
+    <div className="App">
       <Header />
+      <Main />
+      <Footer />
     </div>
   );
 }
