@@ -41,13 +41,19 @@ export default function Main() {
     }
   };
 
-  const RenderError = () => {
+  const RenderError = ({ className }) => {
     if (showWarning) {
       return (
-        <p className="text-red italic text-xs -mt-2.5">Please add a link</p>
+        <p className={`text-red italic text-xs -mt-2.5 ${className}`}>
+          Please add a link
+        </p>
       );
     } else if (errorMsg) {
-      return <p className="text-red italic text-xs -mt-2.5">{errorMsg}</p>;
+      return (
+        <p className={`text-red italic text-xs -mt-2.5 ${className}`}>
+          {errorMsg}
+        </p>
+      );
     } else {
       return null;
     }
@@ -66,7 +72,7 @@ export default function Main() {
     if (isCopied) {
       return (
         <button
-          className="bg-dark-violet rounded-md text-white font-bold py-2 mx-3.5"
+          className="bg-dark-violet rounded-md text-white font-bold py-2 mx-3.5 sm:min-w-min sm:w-30 sm:py-2.5 sm:text-base"
           onClick={handleClickButton}
         >
           Copied!
@@ -75,7 +81,7 @@ export default function Main() {
     }
     return (
       <button
-        className="bg-cyan rounded-md text-white font-bold py-2 mx-3.5"
+        className="bg-cyan rounded-md text-white font-bold py-2 mx-3.5 sm:min-w-min sm:w-30 sm:py-2.5 sm:text-base"
         onClick={handleClickButton}
       >
         Copy
@@ -87,7 +93,7 @@ export default function Main() {
     return (
       <div
         id="shortened-links"
-        className="flex flex-col gap-6 mx-5 mt-6 text-base"
+        className="flex flex-col gap-6 mx-5 mt-6 text-base sm:text-lg sm:gap-5"
       >
         {shortenLinks.slice(0, 3).map((shortenedLink) => {
           return (
@@ -96,21 +102,16 @@ export default function Main() {
               className="bg-white w-full rounded-md"
               key={shortenedLink?.shorten_link}
             >
-              <div className="flex flex-col gap-3 py-4">
+              <div className="flex flex-col gap-3 py-4 sm:flex-row sm:gap-0">
                 <div
-                  className="px-3.5 border-b truncate text-very-dark-blue pb-2"
+                  className="px-3.5 border-b truncate text-very-dark-blue pb-2 sm:border-0 sm:grow sm:pb-0 sm:my-auto"
                   style={{ borderColor: "#E5E5E5" }}
                 >
                   {shortenedLink?.link}
                 </div>
-                <a
-                  href={shortenedLink?.shorten_link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="mx-3.5 text-cyan hover:underline"
-                >
+                <div className="mx-3.5 text-cyan sm:min-w-min sm:min-w-min sm:w-30 sm:py-0 sm:my-auto">
                   {shortenedLink?.shorten_link}
-                </a>
+                </div>
                 <CopyButton link={shortenedLink?.shorten_link} />
               </div>
             </div>
@@ -121,29 +122,31 @@ export default function Main() {
   };
   return (
     <main>
-      <section className="mb-20 pb-2">
+      <section className="mb-20 pb-2 sm:container">
         <form
-          className="shorten-it mx-5 flex flex-col gap-4 bg-dark-violet p-6 rounded-lg bg-shorten-mobile bg-no-repeat bg-contain -mt-20 z-50 relative"
-          style={{ backgroundPosition: "top -2.1rem right -4.2rem" }}
+          className="shorten-it mx-5 flex flex-col gap-4 bg-dark-violet p-6 rounded-lg bg-shorten-mobile sm:bg-shorten-desktop bg-[top_-2.1rem_right_-4.2rem] bg-no-repeat bg-contain -mt-20 z-50 relative sm:flex-row sm:py-14 sm:px-16 sm:flex-wrap sm:min-w-min sm:bg-cover sm:bg-[top_0_right_0] sm:mx-0"
           onSubmit={(e) => handleLink(e)}
         >
           <input
             type="search"
             placeholder="Shorten a link here..."
-            className={`py-3 px-4 rounded-md text-base ${
+            className={`py-3 px-4 rounded-md text-base sm:text-xl sm:grow ${
               showWarning && "outline-red focus"
             }`}
             onChange={(e) => handleLinkTyping(e.target.value)}
             ref={ref}
           />
-          <RenderError />
-          <button className="py-3 bg-cyan rounded-lg font-bold text-white">
+          <RenderError className="sm:absolute sm:text-base sm:mt-0 sm:bottom-1 lg:bottom-6" />
+          <button className="py-3 bg-cyan rounded-lg font-bold text-white sm:active:opacity-70 sm:min-w-min sm:px-9 sm:hover:opacity-50 sm:py-4 sm:text-xl">
             Shorten It!
           </button>
         </form>
         {shortenLinks.length > 0 && <ShortenedLinks />}
       </section>
-      <section id="advance-statistic-container" className="mx-5 mb-20">
+      <section
+        id="advance-statistic-container"
+        className="mx-5 mb-20 sm:container"
+      >
         <div className="text-center flex flex-col gap-4 mb-20">
           <h2
             className="text-very-dark-blue font-bold"

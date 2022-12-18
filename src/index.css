@@ -19,7 +19,7 @@ body{
 
 nav > .menu-container {
   animation-name: mobile-menu;
-  animation-duration: 0.2s;
+  animation-duration: 0.15s;
 }
 
 @keyframes mobile-menu {
