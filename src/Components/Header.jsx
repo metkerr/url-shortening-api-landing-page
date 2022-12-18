@@ -5,10 +5,10 @@ import workingIllustration from "../images/illustration-working.svg";
 export default function Header() {
   const [menuOpen, setMenuOpen] = useState(false);
   return (
-    <header className="pb-44">
+    <header>
       <div
         id="header-wrapper"
-        className="bg-white min-h-min relative flex flex-col pt-10"
+        className="bg-white min-h-min relative flex flex-col pt-10 pb-20"
       >
         <nav className="flex justify-between relative mx-5">
           <div className="nav-logo flex">
@@ -63,19 +63,6 @@ export default function Header() {
               </button>
             </div>
           </div>
-        </div>
-        <div
-          className="shorten-it mx-5 flex flex-col gap-4 bg-dark-violet p-6 rounded-lg -mb-20 bg-shorten-mobile bg-no-repeat bg-contain"
-          style={{ backgroundPosition: "top -1.5rem right -3.5rem" }}
-        >
-          <input
-            type="search"
-            placeholder="Shorten a link here..."
-            className="py-3 px-4 rounded-md text-base"
-          />
-          <button className="py-3 bg-cyan rounded-lg font-bold text-white">
-            Shorten It!
-          </button>
         </div>
       </div>
     </header>
