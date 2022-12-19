@@ -116,7 +116,7 @@ export default function Main() {
     return (
       <div
         id="shortened-links"
-        className="flex flex-col gap-6 mx-5 mt-6 text-base xl:text-lg xl:gap-5"
+        className="flex flex-col gap-6 mx-5 lg:mx-0 mt-6 text-base xl:text-lg xl:gap-5"
       >
         {shortenLinks.slice(0, 3).map((shortenedLink) => {
           return (
