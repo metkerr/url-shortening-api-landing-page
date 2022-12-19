@@ -43,7 +43,7 @@ module.exports = {
     },
     container: {
       center: true,
-      padding: "9.5rem",
+      padding: "6rem",
     },
   },
   plugins: [],

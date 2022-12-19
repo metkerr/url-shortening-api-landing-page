@@ -183,7 +183,7 @@ export default function Main() {
         <div className="flex flex-col text-center xl:flex-row xl:text-left xl:mt-28 xl:pb-14">
           <div
             id="brad-recognition"
-            className="bg-white rounded-md flex flex-col gap-4 px-8 xl:h-76"
+            className="bg-white rounded-md flex flex-col gap-4 px-8 xl:h-[17rem] xl:max-w-[352px] xl:pr-4"
           >
             <div className="icon-container flex">
               <div className="icon-wrapper w-22 h-22 flex bg-dark-violet mx-auto rounded-full mb-4 -mt-12 xl:ml-0 xl:mb-7">
@@ -197,16 +197,16 @@ export default function Main() {
             <h3 className="font-bold text-very-dark-blue text-1.5xl xl:text-2xl">
               Brand Recognition
             </h3>
-            <p className="text-gray text-md xl:text-base leading-7 mb-14">
+            <p className="text-gray text-md xl:text-md leading-7 mb-14">
               Boost your brand recognition with each click. Generic links don’t
               mean a thing. Branded links help instil confidence in your
               content.
             </p>
           </div>
-          <span className="mx-auto w-2 bg-cyan h-22 xl:h-2 xl:w-30 xl:mt-40" />
+          <span className="mx-auto w-2 bg-cyan h-22 xl:h-2 xl:w-24 xl:mt-40" />
           <div
             id="detailed-records"
-            className="bg-white rounded-md flex flex-col gap-4 px-8 xl:pb-5 xl:h-76 mt-12"
+            className="bg-white rounded-md flex flex-col gap-4 px-8 xl:pb-5 xl:h-[17rem] xl:max-w-[352px] xl:pr-4 mt-12 xl:w-[56rem]"
           >
             <div className="icon-container flex">
               <div className="icon-wrapper w-22 h-22 flex bg-dark-violet mx-auto rounded-full mb-4 -mt-12 xl:ml-0 xl:mb-7">
@@ -220,17 +220,17 @@ export default function Main() {
             <h3 className="font-bold text-very-dark-blue text-1.5xl xl:text-2xl">
               Detailed Records
             </h3>
-            <p className="text-gray text-md xl:text-base leading-7 mb-14">
+            <p className="text-gray text-md xl:text-md leading-7 mb-14">
               Gain insights into who is clicking your links. Knowing when and
               where people engage with your content helps inform better
               decisions.
             </p>
           </div>
-          <span className="mx-auto w-2 bg-cyan h-22 xl:h-2 xl:w-30 xl:mt-40" />
+          <span className="mx-auto w-2 bg-cyan h-22 xl:h-2 xl:w-24 xl:mt-40" />
           <div
             id="fully-customizable"
-            className="bg-white rounded-md flex flex-col gap-4 px-8 xl:h-76
-              xl:mt-24"
+            className="bg-white rounded-md flex flex-col gap-4 px-8 xl:h-[17rem] xl:max-w-[352px] xl:pr-4
+              xl:mt-24 xl:w-[56rem]"
           >
             <div className="icon-container flex">
               <div className="icon-wrapper w-22 h-22 flex bg-dark-violet mx-auto rounded-full mb-4 -mt-12 xl:ml-0 xl:mb-7">
@@ -244,7 +244,7 @@ export default function Main() {
             <h3 className="font-bold text-very-dark-blue text-1.5xl xl:text-2xl">
               Fully Customizable
             </h3>
-            <p className="text-gray text-md xl:text-base leading-7 mb-14">
+            <p className="text-gray text-md xl:text-md leading-7 mb-14">
               Improve brand awareness and content discoverability through
               customizable links, supercharging audience engagement.
             </p>
