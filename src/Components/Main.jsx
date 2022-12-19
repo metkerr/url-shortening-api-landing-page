@@ -1,4 +1,4 @@
-import { useState, useRef } from "react";
+import { useState, useRef, useEffect } from "react";
 import brandIcon from "../images/icon-brand-recognition.svg";
 import detailedIcon from "../images/icon-detailed-records.svg";
 import fullyIcon from "../images/icon-fully-customizable.svg";
@@ -11,6 +11,17 @@ export default function Main() {
   const [shortenLinks, setShortenLinks] = useState([]);
   const ref = useRef();
   const baseAPI = "https://api.shrtco.de/v2/shorten?url=";
+
+  useEffect(() => {
+    const getLocalStorageScore = JSON.parse(
+      localStorage.getItem("shortenLinks")
+    );
+    if (getLocalStorageScore) {
+      return setShortenLinks(getLocalStorageScore);
+    } else {
+      return setShortenLinks([]);
+    }
+  }, [shortenLinks]);
 
   const handleLinkTyping = (value) => {
     setLink(value);
@@ -33,7 +44,19 @@ export default function Main() {
               shorten_link: res.data?.result?.full_short_link,
             },
             ...shortenLinks,
-          ]);
+          ]); //update shorten links array
+
+          localStorage.setItem(
+            "shortenLinks",
+            JSON.stringify([
+              {
+                link: res.data?.result?.original_link,
+                shorten_link: res.data?.result?.full_short_link,
+              },
+              ...shortenLinks,
+            ])
+          );
+
           ref.current.value = "";
           setLink("");
         })
