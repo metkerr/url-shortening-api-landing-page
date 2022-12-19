@@ -21,7 +21,7 @@ export default function Main() {
     } else {
       return setShortenLinks([]);
     }
-  }, [shortenLinks]);
+  }, []);
 
   const handleLinkTyping = (value) => {
     setLink(value);
