@@ -59,14 +59,14 @@ export default function Header() {
             <img
               src={workingIllustration}
               alt="working illustration"
-              className="h-80 sm:mx-auto object-cover object-left pl-9 mt-1 lg:pl-0 lg:h-illustration lg:-mt-24 lg:mx-auto min-w-fit xl:mr-10"
+              className="h-80 sm:mx-auto object-cover object-left pl-5 mt-1 lg:pl-0 lg:h-illustration lg:-mt-24 lg:mx-auto min-w-fit xl:ml-0 2xl:ml-36"
             />
           </div>
-          <div className="cta-wrapper text-center flex flex-col gap-3 mx-5 lg:text-left lg:basis-1/2 lg:mx-0 lg:grow min-w-min lg:min-w-[488px]">
-            <h1 className="text-very-dark-blue font-bold text-4.5xl lg:leading-medium lg:text-7.5xl">
+          <div className="cta-wrapper text-center flex flex-col gap-3 mx-5 lg:text-left lg:basis-1/2 lg:mx-0 lg:grow min-w-min lg:min-w-[488px] xl:min-w-[580px]">
+            <h1 className="text-very-dark-blue font-bold text-4.5xl lg:leading-medium lg:text-7xl">
               More than just shorter links
             </h1>
-            <p className="text-gray leading-7 mt-1 lg:pr-44 lg:-mt-1 lg:leading-9 lg:text-xl">
+            <p className="text-gray leading-7 mt-1 lg:pr-24 lg:-mt-1 lg:leading-9 lg:text-xl">
               Build your brand's recognition and get detailed insights on how
               your links are performing
             </p>
