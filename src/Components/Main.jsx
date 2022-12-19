@@ -206,7 +206,7 @@ export default function Main() {
           <span className="mx-auto w-2 bg-cyan h-22 xl:h-2 xl:w-24 xl:mt-40" />
           <div
             id="detailed-records"
-            className="bg-white rounded-md flex flex-col gap-4 px-8 xl:pb-5 xl:h-[17rem] xl:max-w-[352px] xl:pr-4 mt-12 xl:w-[56rem]"
+            className="bg-white rounded-md flex flex-col gap-4 px-8 xl:pb-5 xl:h-[17rem] xl:max-w-[352px] xl:pr-4 xl:mt-12 xl:w-[56rem]"
           >
             <div className="icon-container flex">
               <div className="icon-wrapper w-22 h-22 flex bg-dark-violet mx-auto rounded-full mb-4 -mt-12 xl:ml-0 xl:mb-7">
