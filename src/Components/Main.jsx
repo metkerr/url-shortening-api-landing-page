@@ -180,7 +180,7 @@ export default function Main() {
           </p>
         </div>
 
-        <div className="flex flex-col text-center xl:flex-row xl:text-left xl:mt-28 xl:pb-14">
+        <div className="flex flex-col text-center xl:flex-row xl:text-left xl:mt-28 xl:pb-14 xl:max-w-[1088px] xl:mx-auto">
           <div
             id="brad-recognition"
             className="bg-white rounded-md flex flex-col gap-4 px-8 xl:h-[17rem] xl:max-w-[352px] xl:pr-4"
