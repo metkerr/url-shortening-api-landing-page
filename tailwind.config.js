@@ -14,8 +14,9 @@ module.exports = {
       },
       height: {
         22: "5.5rem",
+        76: "18.5rem",
         84: "21rem",
-        illustration: "34rem",
+        illustration: "32rem",
       },
       width: {
         22: "5.5rem",
@@ -26,6 +27,7 @@ module.exports = {
         md: "0.95rem",
         "1.5xl": "1.375rem",
         "2.5xl": "1.675rem",
+        "2.7xl": "1.72rem",
         "4.5xl": ["2.65rem", "3rem"],
         "7.5xl": ["5.175rem", "1"],
       },

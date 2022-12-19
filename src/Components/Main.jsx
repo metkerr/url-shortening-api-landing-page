@@ -72,7 +72,7 @@ export default function Main() {
     if (isCopied) {
       return (
         <button
-          className="bg-dark-violet rounded-md text-white font-bold py-2 mx-3.5 sm:min-w-min sm:w-30 sm:py-2.5 sm:text-base"
+          className="bg-dark-violet rounded-md text-white font-bold py-2 mx-3.5 xl:min-w-min xl:w-30 xl:py-2.5 xl:text-base"
           onClick={handleClickButton}
         >
           Copied!
@@ -81,7 +81,7 @@ export default function Main() {
     }
     return (
       <button
-        className="bg-cyan rounded-md text-white font-bold py-2 mx-3.5 sm:min-w-min sm:w-30 sm:py-2.5 sm:text-base"
+        className="bg-cyan rounded-md text-white font-bold py-2 mx-3.5 xl:min-w-min xl:w-30 xl:py-2.5 xl:text-base hover:opacity-50 active:opacity-70"
         onClick={handleClickButton}
       >
         Copy
@@ -93,7 +93,7 @@ export default function Main() {
     return (
       <div
         id="shortened-links"
-        className="flex flex-col gap-6 mx-5 mt-6 text-base sm:text-lg sm:gap-5"
+        className="flex flex-col gap-6 mx-5 mt-6 text-base xl:text-lg xl:gap-5"
       >
         {shortenLinks.slice(0, 3).map((shortenedLink) => {
           return (
@@ -102,14 +102,14 @@ export default function Main() {
               className="bg-white w-full rounded-md"
               key={shortenedLink?.shorten_link}
             >
-              <div className="flex flex-col gap-3 py-4 sm:flex-row sm:gap-0">
+              <div className="flex flex-col gap-3 py-4 xl:flex-row xl:gap-0">
                 <div
-                  className="px-3.5 border-b truncate text-very-dark-blue pb-2 sm:border-0 sm:grow sm:pb-0 sm:my-auto"
+                  className="px-3.5 border-b truncate text-very-dark-blue pb-2 xl:border-0 xl:grow xl:pb-0 xl:my-auto"
                   style={{ borderColor: "#E5E5E5" }}
                 >
                   {shortenedLink?.link}
                 </div>
-                <div className="mx-3.5 text-cyan sm:min-w-min sm:min-w-min sm:w-30 sm:py-0 sm:my-auto">
+                <div className="mx-3.5 text-cyan xl:min-w-min xl:min-w-min xl:w-30 xl:py-0 xl:my-auto">
                   {shortenedLink?.shorten_link}
                 </div>
                 <CopyButton link={shortenedLink?.shorten_link} />
@@ -122,22 +122,22 @@ export default function Main() {
   };
   return (
     <main>
-      <section className="mb-20 pb-2 sm:container">
+      <section className="mb-20 pb-2 xl:container">
         <form
-          className="shorten-it mx-5 flex flex-col gap-4 bg-dark-violet p-6 rounded-lg bg-shorten-mobile sm:bg-shorten-desktop bg-[top_-2.1rem_right_-4.2rem] bg-no-repeat bg-contain -mt-20 z-50 relative sm:flex-row sm:py-14 sm:px-16 sm:flex-wrap sm:min-w-min sm:bg-cover sm:bg-[top_0_right_0] sm:mx-0"
+          className="shorten-it mx-5 flex flex-col gap-4 bg-dark-violet p-6 rounded-lg bg-shorten-mobile xl:bg-shorten-desktop bg-[top_-2.1rem_right_-4.2rem] bg-no-repeat bg-contain -mt-20 z-50 relative xl:flex-row xl:py-14 xl:px-16 xl:flex-wrap xl:min-w-min xl:bg-cover xl:bg-[top_0_right_0] xl:mx-0"
           onSubmit={(e) => handleLink(e)}
         >
           <input
             type="search"
             placeholder="Shorten a link here..."
-            className={`py-3 px-4 rounded-md text-base sm:text-xl sm:grow ${
+            className={`py-3 px-4 rounded-md text-base xl:text-xl xl:grow ${
               showWarning && "outline-red focus"
             }`}
             onChange={(e) => handleLinkTyping(e.target.value)}
             ref={ref}
           />
-          <RenderError className="sm:absolute sm:text-base sm:mt-0 sm:bottom-1 lg:bottom-6" />
-          <button className="py-3 bg-cyan rounded-lg font-bold text-white sm:active:opacity-70 sm:min-w-min sm:px-9 sm:hover:opacity-50 sm:py-4 sm:text-xl">
+          <RenderError className="xl:absolute xl:text-base xl:mt-0 lg:bottom-6" />
+          <button className="py-3 bg-cyan rounded-lg font-bold text-white active:opacity-70 xl:min-w-min xl:px-9 hover:opacity-50 xl:py-4 xl:text-xl">
             Shorten It!
           </button>
         </form>
@@ -148,25 +148,22 @@ export default function Main() {
         className="mx-5 mb-20 sm:container"
       >
         <div className="text-center flex flex-col gap-4 mb-20">
-          <h2
-            className="text-very-dark-blue font-bold"
-            style={{ fontSize: "1.72rem" }}
-          >
+          <h2 className="text-very-dark-blue font-bold text-2.7xl xl:text-4.5xl">
             Advanced Statistic
           </h2>
-          <p className="text-gray text-base leading-7">
+          <p className="text-gray text-base xl:text-xl leading-7 xl:w-1/2 xl:px-12 xl:mx-auto xl:leading-8">
             Track how your links are performing across the web with our advanced
             statistics dashboard.
           </p>
         </div>
 
-        <div className="flex flex-col text-center">
+        <div className="flex flex-col text-center xl:flex-row xl:text-left xl:mt-28 xl:pb-14">
           <div
             id="brad-recognition"
-            className="bg-white rounded-md flex flex-col gap-4 px-8"
+            className="bg-white rounded-md flex flex-col gap-4 px-8 xl:h-76"
           >
             <div className="icon-container flex">
-              <div className="icon-wrapper w-22 h-22 flex bg-dark-violet mx-auto rounded-full mb-4 -mt-12">
+              <div className="icon-wrapper w-22 h-22 flex bg-dark-violet mx-auto rounded-full mb-4 -mt-12 xl:ml-0 xl:mb-7">
                 <img
                   src={brandIcon}
                   alt="brand icon"
@@ -174,22 +171,22 @@ export default function Main() {
                 />
               </div>
             </div>
-            <h3 className="font-bold text-very-dark-blue text-1.5xl">
+            <h3 className="font-bold text-very-dark-blue text-1.5xl xl:text-2xl">
               Brand Recognition
             </h3>
-            <p className="text-gray text-md leading-7 mb-7">
+            <p className="text-gray text-md xl:text-base leading-7 mb-14">
               Boost your brand recognition with each click. Generic links don’t
               mean a thing. Branded links help instil confidence in your
               content.
             </p>
           </div>
-          <span className="mx-auto w-2 bg-cyan h-22" />
+          <span className="mx-auto w-2 bg-cyan h-22 xl:h-2 xl:w-30 xl:mt-40" />
           <div
             id="detailed-records"
-            className="bg-white rounded-md flex flex-col gap-4 px-8"
+            className="bg-white rounded-md flex flex-col gap-4 px-8 xl:pb-5 xl:h-76 mt-12"
           >
             <div className="icon-container flex">
-              <div className="icon-wrapper w-22 h-22 flex bg-dark-violet mx-auto rounded-full mb-4 -mt-12">
+              <div className="icon-wrapper w-22 h-22 flex bg-dark-violet mx-auto rounded-full mb-4 -mt-12 xl:ml-0 xl:mb-7">
                 <img
                   src={detailedIcon}
                   alt="detailed icon"
@@ -197,22 +194,23 @@ export default function Main() {
                 />
               </div>
             </div>
-            <h3 className="font-bold text-very-dark-blue text-1.5xl">
+            <h3 className="font-bold text-very-dark-blue text-1.5xl xl:text-2xl">
               Detailed Records
             </h3>
-            <p className="text-gray text-md leading-7 mb-7">
+            <p className="text-gray text-md xl:text-base leading-7 mb-14">
               Gain insights into who is clicking your links. Knowing when and
               where people engage with your content helps inform better
               decisions.
             </p>
           </div>
-          <span className="mx-auto w-2 bg-cyan h-22" />
+          <span className="mx-auto w-2 bg-cyan h-22 xl:h-2 xl:w-30 xl:mt-40" />
           <div
             id="fully-customizable"
-            className="bg-white rounded-md flex flex-col gap-4 px-8"
+            className="bg-white rounded-md flex flex-col gap-4 px-8 xl:h-76
+              xl:mt-24"
           >
             <div className="icon-container flex">
-              <div className="icon-wrapper w-22 h-22 flex bg-dark-violet mx-auto rounded-full mb-4 -mt-12">
+              <div className="icon-wrapper w-22 h-22 flex bg-dark-violet mx-auto rounded-full mb-4 -mt-12 xl:ml-0 xl:mb-7">
                 <img
                   src={fullyIcon}
                   alt="fully icon"
@@ -220,10 +218,10 @@ export default function Main() {
                 />
               </div>
             </div>
-            <h3 className="font-bold text-very-dark-blue text-1.5xl">
+            <h3 className="font-bold text-very-dark-blue text-1.5xl xl:text-2xl">
               Fully Customizable
             </h3>
-            <p className="text-gray text-md leading-7 mb-7">
+            <p className="text-gray text-md xl:text-base leading-7 mb-14">
               Improve brand awareness and content discoverability through
               customizable links, supercharging audience engagement.
             </p>
@@ -232,14 +230,16 @@ export default function Main() {
       </section>
       <section
         id="main-cta"
-        className="bg-dark-violet text-white flex bg-boost-mobile bg-center bg-no-repeat bg-cover"
+        className="bg-dark-violet text-white flex bg-boost-mobile xl:bg-boost-desktop bg-center bg-no-repeat bg-cover"
       >
         <div
           id="main-cta-wrapper"
-          className="mx-auto my-20 py-4 flex flex-col gap-3"
+          className="mx-auto my-20 py-4 flex flex-col gap-3 xl:my-14"
         >
-          <h2 className="text-2.5xl font-bold">Boost your links today</h2>
-          <button className="bg-cyan rounded-full px-12 py-3.5 mx-auto font-bold">
+          <h2 className="text-2.5xl text-center font-bold xl:text-4.5xl xl:pb-5">
+            Boost your links today
+          </h2>
+          <button className="bg-cyan rounded-full px-12 py-3.5 mx-auto font-bold xl:text-xl active:opacity-70 hover:opacity-50">
             Get Started
           </button>
         </div>
